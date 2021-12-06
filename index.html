@@ -4,6 +4,19 @@
 		<meta name="com.silverpop.brandeddomains" content="www.pages08.net,acoustic.com,ankurc176.github.io,cloud.goacoustic.com,google.com,postit.com" />
 		<meta name="com.silverpop.cothost" content="campaign-ca-1.goacoustic.com" />
 	        <script src="https://www.sc.pages08.net/lp/static/js/iMAWebCookie.js?3ffe9725-177d64fffb3-0dabe521464f81af54f1831dff3eeb60&h=www.pages08.net" type="text/javascript"></script>
+		<script>
+
+function multiconv(){
+
+ewt.cot({action:"Purchase",detail:"Blueberry Ice Cream",amount:"1.24"});
+
+ewt.cot({action:"Purchase",detail:"Vanilla Ice Cream",amount:"1.28"});
+
+ewt.cot({action:"Purchase",detail:"Chocolate Ice Cream",amount:"1.29"});
+
+}
+
+</script>
 	</head>
 	<body>
 		<img src='confirmation.png' onload="ewt.cot({action:'purchase',detail:'galaxy_tab',amount:'300.00'})" width=0 height=0 />
@@ -14,6 +27,9 @@
 			<!-- <a href='Anchortag.html' target='_self' onclick='return ewt.cot({action:'SomeItem',detail:'Product',amount:'1.00'});'>Confirm Purchase for conversion tracking via Anchor tag</a> -->
 			<a href="Anchortag.html" onClick='return ewt.cotLink({action:'Purchase',detail:'Laptop',amount:'499.00',link:this});'>Confirm Purchase for conversion tracking via Anchor tag1 </a>
 			<a href="" onclick="return confirm('Are you sure you want to delete this item?');">Delete</a>
+			
+
+			<button type="button" onclick="multiconv">Submit</button>
 	</body>
 </html>
 <!-- MireOK -->
