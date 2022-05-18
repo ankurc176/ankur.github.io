@@ -17,6 +17,15 @@ ewt.cot({action:"Purchase",detail:"Chocolate Ice Cream",amount:"1.29"});
 }
 
 </script>
+	
+<script type='text/javascript'>
+var customEventsOnLoad = window.onload;
+window.onload = function()
+{ customEventsOnLoad();
+ewt.track({name:'page',type:'pagetype'});
+ewt.track({name:'chapter',type:'pagetype'});
+}
+</script>
 	</head>
 	<body>
 		<img src='confirmation.png' onload="ewt.cot({action:'purchase',detail:'galaxy_tab',amount:'300.00'})" width=0 height=0 />
