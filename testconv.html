@@ -11,9 +11,18 @@ window.addEventListener('load', function(){
 ewt.cot({action:"Purchase",detail:"Blueberry Ice Cream",amount:"1.24"});
 
 }); </script>
+	
+	<script type='text/javascript'>
+var customEventsOnLoad = window.onload;
+window.onload = function()
+{ customEventsOnLoad();
+ewt.track({name:'page',type:'pagetype'});
+ewt.track({name:'chapter',type:'pagetype'});
+}
+</script>
 	</head>
 	<body>
-	Test Conversion completed 
+	Test Conversion completed Custom event added
 		
 
 	</body>
