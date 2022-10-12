@@ -18,20 +18,24 @@ ewt.cot({action:"Purchase",detail:"Chocolate Ice Cream",amount:"1.29"});
 
 </script>
 	
-<script type='text/javascript'>
-var customEventsOnLoad = window.onload;
-window.onload = function()
-{ customEventsOnLoad();
-ewt.track({name:'page',type:'pagetype'});
-ewt.track({name:'chapter',type:'pagetype'});
-}
+<script type="text/javascript"> 
+    function customLoad() {  
+    ewt.track({name:'HK_Test',type:'himmat'}); 
+    }
+    if (document.readyState === "complete") {
+       customLoad();
+    } else if (window.addEventListener) {
+       window.addEventListener('load', customLoad, false);
+    } else if (window.attachEvent) {
+       window.attachEvent('onload', customLoad);
+    } else window.onload = customLoad;
 </script>
 	</head>
 	<body>
 		<img src='confirmation.png' onload="ewt.cot({action:'purchase',detail:'galaxy_tab',amount:'300.00'})" width=0 height=0 />
 		<p>&nbsp;</p>
 		<p>
-			See our offers for a flight to Mauritius:  EDITED FILE
+			See our offers for a flight to Mauritius:  EDITED FILE Himmat
 			<a href="testconv.html" target='_self'>Confirm Purchase for conversion tracking via javascript call</a><br><br>
 			<!-- <a href='Anchortag.html' target='_self' onclick='return ewt.cot({action:'SomeItem',detail:'Product',amount:'1.00'});'>Confirm Purchase for conversion tracking via Anchor tag</a> -->
 			<a href="Anchortag.html" onclick='javascript:return ewt.cotLink({action:'Purchase',detail:'Laptop',amount:'499.00'});'>Confirm Purchase for conversion tracking via Anchor tag1 </a>
